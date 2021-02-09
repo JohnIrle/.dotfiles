@@ -11,11 +11,13 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # User configuration
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/local/mysql/bin"
 
-[ -d "$HOME/Library/Android/sdk" ] && ANDROID_SDK=$HOME/Library/Android/sdk || ANDROID_SDK=$HOME/Android/Sdk
-echo "export ANDROID_SDK=$ANDROID_SDK" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
-
-echo "export PATH=$HOME/Library/Android/sdk/platform-tools:\$PATH" >> ~/`[[ $SHELL == *"zsh" ]] && echo '.zshrc' || echo '.bash_profile'`
-
+# Used for status bar versions
+iterm2_print_user_vars() {
+  iterm2_set_user_var pythonVersion $(python3 -V | awk '{ print $2 }')
+  iterm2_set_user_var goVersion $(go version | sed 's/^.*[^0-9]\([0-9]*\.[0-9]*\.[0-9]*\).*$/\1/')
+  iterm2_set_user_var nodeVersion $(node -v)
+  iterm2_set_user_var javaVersion $(jenv global)
+}
 
 # Jenv
 eval "$(jenv init -)" >> /Users/john/.zshrc
@@ -58,6 +60,7 @@ export PATH=/usr/local/php5/bin:$PATH # php
 export PATH=$PATH:~/.local/bin
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 # Go
 export GOPATH="$HOME/Developer/go"
@@ -85,10 +88,12 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
+# Android Studio
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 alias dotfiles='git --git-dir=/Users/john/.dotfiles/ --work-tree=/Users/john'
 
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
