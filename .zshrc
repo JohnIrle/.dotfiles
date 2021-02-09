@@ -97,3 +97,6 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 alias dotfiles='git --git-dir=/Users/john/.dotfiles/ --work-tree=/Users/john'
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
