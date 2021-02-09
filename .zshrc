@@ -84,72 +84,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export ANDROID_SDK=/Users/john/Library/Android/sdk
 export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
+
+alias dotfiles='git --git-dir=/Users/john/.dotfiles/ --work-tree=/Users/john'
+
 export ANDROID_SDK=/Users/john/Library/Android/sdk
 export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-export ANDROID_SDK=/Users/john/Library/Android/sdk
-export PATH=/Users/john/Library/Android/sdk/platform-tools:$PATH
-alias config='git --git-dir=/Users/john/.cfg/ --work-tree=/Users/john'
