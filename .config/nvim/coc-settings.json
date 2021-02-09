@@ -1,0 +1,18 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "json",
+    "rust"
+  ],
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".git/", ".hg"],
+      "filetypes": ["go"]
+    }
+  }
+}
