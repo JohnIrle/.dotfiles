@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/John/.oh-my-zsh
+export ZSH=/Users/john/.oh-my-zsh
 
 ZSH_THEME="avit"
 plugins=(npm node)
@@ -56,7 +56,6 @@ alias branches='git log --graph --oneline --branches'
 alias python=/usr/local/bin/python3
 alias pip=/usr/local/opt/python@3.8/bin/pip3
 
-export PATH=/usr/local/php5/bin:$PATH # php
 export PATH=$PATH:~/.local/bin
 
 export PATH="/usr/local/sbin:$PATH"
@@ -66,19 +65,13 @@ export PATH="/usr/local/bin:$PATH"
 export GOPATH="$HOME/Developer/go"
 export PATH="$PATH:$GOPATH/bin"
 
-# perlbrew
-source ~/perl5/perlbrew/etc/bashrc
-
-# rbenv
-eval "$(rbenv init -)"
-
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Swift
 export TOOLCHAINS=swift
 
-export PATH="/Users/john/Library/Python/3.7/bin:$PATH"
+export PATH="~/Library/Python/3.7/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 # NVM
@@ -95,8 +88,7 @@ export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
-alias dotfiles='git --git-dir=/Users/john/.dotfiles/ --work-tree=/Users/john'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
