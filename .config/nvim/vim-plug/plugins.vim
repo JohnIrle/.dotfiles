@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'morhetz/gruvbox'
+    Plug 'kyazdani42/nvim-web-devicons'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'

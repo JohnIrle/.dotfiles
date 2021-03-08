@@ -5,6 +5,7 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
 lua require'plug-colorizer'
 lua require('lsp')
+lua require('devicons')
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/ripgrep.vim
