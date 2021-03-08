@@ -11,14 +11,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'leafgarland/typescript-vim'
     Plug 'fatih/vim-go'
     Plug 'sheerun/vim-polyglot'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'jiangmiao/auto-pairs'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'morhetz/gruvbox'
     Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/completion-nvim'
     Plug 'mhinz/vim-startify'
     Plug 'mhinz/vim-signify'
+    Plug 'prettier/vim-prettier', { 'do': 'npm install' }
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'tpope/vim-commentary'
