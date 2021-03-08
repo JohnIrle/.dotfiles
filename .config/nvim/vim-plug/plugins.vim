@@ -20,6 +20,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-lua/completion-nvim'
     Plug 'mhinz/vim-startify'
     Plug 'mhinz/vim-signify'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'prettier/vim-prettier', { 'do': 'npm install' }
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
