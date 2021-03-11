@@ -14,8 +14,8 @@ export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/us
 # Used for status bar versions
 iterm2_print_user_vars() {
   iterm2_set_user_var pythonVersion $(python3 -V | awk '{ print $2 }')
-  iterm2_set_user_var goVersion $(go version | sed 's/^.*[^0-9]\([0-9]*\.[0-9]*\.[0-9]*\).*$/\1/')
-  iterm2_set_user_var nodeVersion $(node -v)
+  iterm2_set_user_var goVersion $(go version | awk '{print $3}' | cut -b 3-6)
+  iterm2_set_user_var nodeVersion $(node -v | cut -b 2-7)
   iterm2_set_user_var javaVersion $(jenv global)
 }
 

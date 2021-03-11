@@ -3,9 +3,6 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
-lua require'plug-colorizer'
-lua require('lsp')
-lua require('devicons')
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/ripgrep.vim
@@ -13,3 +10,7 @@ source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/fugitive.vim
 source $HOME/.config/nvim/plug-config/lsp.vim
+lua require('lsp')
+lua require('john')
+lua require('devicons')
+lua require('plug-colorizer')
