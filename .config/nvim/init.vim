@@ -11,4 +11,4 @@ source $HOME/.config/nvim/plug-config/fugitive.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 
-lua require('john')
+lua require('plugins')

@@ -1,4 +1,4 @@
-local sumneko_root_path = '/Users/john/Developer/lua-language-server'
+local sumneko_root_path = '/Users/john/.config/nvim/lua-language-server'
 local sumneko_binary = sumneko_root_path .. "/bin/macOS/lua-language-server"
 
 local on_attach = require'completion'.on_attach
