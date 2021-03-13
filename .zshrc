@@ -41,10 +41,11 @@ alias cat='bat'
 alias k="kubectl"
 
 # Tmux
-alias tmux="TERM=screen-256color-bce tmux"
-alias tn="tmux -u new"
-alias ta="tmux -u attach"
-alias tt="nvim ~/.tmux.conf"
+TMUX_CONFIG="~/.config/tmux/.tmux.conf"
+# alias tmux="TERM=screen-256color-bce tmux"
+alias tn="tmux -u -f $TMUX_CONFIG new"
+alias ta="tmux -u -f $TMUX_CONFIG attach"
+alias tt="nvim $TMUX_CONFIG"
 
 # Git
 alias gs="git status"
