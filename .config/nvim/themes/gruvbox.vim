@@ -1,7 +1,5 @@
-set background=dark
-syntax on
-
 colorscheme gruvbox
+set background=dark
 
 if (has("termguicolors"))
   set termguicolors
