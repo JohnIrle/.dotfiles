@@ -38,6 +38,7 @@ alias work="cd ~/Developer/charterandgo/admin_ui && code . && npm start"
 alias cd..='cd ..'
 alias ..='cd ..'
 alias cat='bat'
+alias ls='lsd'
 alias k="kubectl"
 
 # Tmux
@@ -52,6 +53,9 @@ alias gs="git status"
 alias ga="git add"
 alias glo='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias branches='git log --graph --oneline --branches'
+
+# clangd
+export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 
 alias python=/usr/local/bin/python3
