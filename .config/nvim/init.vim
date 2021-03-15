@@ -12,6 +12,7 @@ source $HOME/.config/nvim/plug-config/fugitive.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/pear-tree.vim
+source $HOME/.config/nvim/plug-config/vim-closetag.vim
 
 lua require('plugins')
 lua require('lsp')
