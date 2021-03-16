@@ -44,6 +44,7 @@ alias k="kubectl"
 # Tmux
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
 # alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="tmux -u -f $TMUX_CONFIG"
 alias tn="tmux -u -f $TMUX_CONFIG new"
 alias ta="tmux -u -f $TMUX_CONFIG attach"
 alias tt="nvim $TMUX_CONFIG"
