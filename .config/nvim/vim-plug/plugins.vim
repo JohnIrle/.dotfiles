@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
+    Plug 'sbdchd/neoformat'
     Plug 'mhinz/vim-startify'
     Plug 'mhinz/vim-signify'
     Plug 'nvim-lua/popup.nvim'
@@ -28,8 +29,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'norcalli/snippets.nvim'
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'nvim-treesitter/playground'
     Plug 'tmsvg/pear-tree'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'

@@ -1,3 +1,5 @@
+require'snippets'.use_suggested_mappings()
+
 local on_attach = require'completion'.on_attach
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
