@@ -1,10 +1,7 @@
 local sumneko_root_path = '/Users/john/.config/nvim/lua-language-server'
 local sumneko_binary = sumneko_root_path .. "/bin/macOS/lua-language-server"
 
-local on_attach = require'completion'.on_attach
-
 require'lspconfig'.sumneko_lua.setup {
-  on_attach = on_attach,
   cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
   settings = {
     Lua = {
