@@ -17,18 +17,28 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'kyazdani42/nvim-web-devicons'
-    Plug 'norcalli/nvim-colorizer.lua'
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/completion-nvim'
-    Plug 'sbdchd/neoformat'
     Plug 'mhinz/vim-startify'
     Plug 'mhinz/vim-signify'
+    Plug 'norcalli/nvim-colorizer.lua'
+
+    " Lsp, autocomplete, formatting
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'onsails/lspkind-nvim'
+    Plug 'hrsh7th/nvim-compe'
+    Plug 'norcalli/snippets.nvim'
+    Plug 'sbdchd/neoformat'
+
+    " Telescope
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
-    Plug 'norcalli/snippets.nvim'
+
+    " Icons
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'ryanoasis/vim-devicons'
+
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'tmsvg/pear-tree'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
