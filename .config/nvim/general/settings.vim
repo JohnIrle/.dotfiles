@@ -6,6 +6,7 @@ set hidden                              " Required to keep multiple buffers open
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
+set pumblend=25                         " Transparent popups
 set fileencoding=utf-8                  " The encoding written to file
 set ruler              			            " Show the cursor position all the time
 set iskeyword+=-                      	" treat dash separated words as a word text object"
@@ -27,7 +28,7 @@ set cursorline                          " Enable highlighting of the current lin
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set noswapfile
-set nobackup                            " This is recommended by coc
+set nobackup                           " This is recommended by coc
 set incsearch
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
