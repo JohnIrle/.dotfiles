@@ -41,5 +41,3 @@ nnoremap <Leader>O O<Esc>^Da
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 nnoremap <Leader>ps :Rg<SPACE>
-
-nmap <Leader>e :CocCommand explorer<CR>
