@@ -20,7 +20,7 @@ iterm2_print_user_vars() {
 }
 
 # Jenv
-eval "$(jenv init -)" >> /Users/john/.zshrc
+eval "$(jenv init -)" >>/Users/john/.zshrc
 export JENV_ROOT=/usr/local/opt/jenv
 
 source $ZSH/oh-my-zsh.sh
@@ -43,7 +43,6 @@ alias k="kubectl"
 
 # Tmux
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
-# alias tmux="TERM=screen-256color-bce tmux"
 alias tmux="tmux -u -f $TMUX_CONFIG"
 alias tn="tmux -u -f $TMUX_CONFIG new"
 alias ta="tmux -u -f $TMUX_CONFIG attach"
@@ -58,9 +57,8 @@ alias branches='git log --graph --oneline --branches'
 # clangd
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
-
 alias python=/usr/local/bin/python3
-alias pip=/usr/local/opt/python@3.8/bin/pip3
+alias pip=/usr/local/Cellar/python@3.9/3.9.2_1/bin/pip3
 
 export PATH=$PATH:~/.local/bin
 
@@ -82,7 +80,7 @@ export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -95,6 +93,5 @@ export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
