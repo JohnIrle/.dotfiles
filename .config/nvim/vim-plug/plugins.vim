@@ -18,8 +18,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'mhinz/vim-startify'
-    Plug 'mhinz/vim-signify'
     Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'lewis6991/gitsigns.nvim'
 
     " Lsp, autocomplete, formatting
     Plug 'neovim/nvim-lspconfig'
@@ -27,6 +27,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/nvim-compe'
     Plug 'norcalli/snippets.nvim'
     Plug 'sbdchd/neoformat'
+    Plug 'kosayoda/nvim-lightbulb'
 
     " Telescope
     Plug 'nvim-lua/popup.nvim'
@@ -45,10 +46,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-dispatch'
     Plug 'junegunn/gv.vim'
-    Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
-    Plug 'junegunn/fzf.vim'
-    Plug 'stsewd/fzf-checkout.vim'
-    Plug 'jremmen/vim-ripgrep'
     Plug 'vim-utils/vim-man'
     Plug 'christoomey/vim-tmux-navigator'
 
