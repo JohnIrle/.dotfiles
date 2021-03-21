@@ -48,5 +48,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/gv.vim'
     Plug 'vim-utils/vim-man'
     Plug 'christoomey/vim-tmux-navigator'
+    Plug 'christoomey/vim-system-copy'
 
 call plug#end()
