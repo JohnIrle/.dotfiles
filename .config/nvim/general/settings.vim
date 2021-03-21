@@ -35,7 +35,7 @@ set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
-set clipboard
+set clipboard+=unnamedplus
 set re=0
 let g:netrw_browse_split = 2
 let g:netrw_banner = 0

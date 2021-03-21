@@ -7,8 +7,7 @@ nnoremap <Down>    :resize -2<CR>
 nnoremap <Up>    :resize +2<CR>
 nnoremap <Left>    :vertical resize -2<CR>
 nnoremap <Right>    :vertical resize +2<CR>
-
-" Remap escape  
+" Remap escape
 inoremap jj <Esc>
 
 " Easy CAPS
