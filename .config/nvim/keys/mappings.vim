@@ -21,6 +21,7 @@ nnoremap <S-TAB> :bprevious<CR>
 
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
+
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
@@ -39,4 +40,5 @@ nnoremap <Leader>O O<Esc>^Da
 
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
-nnoremap <Leader>ps :Rg<SPACE>
+map <Leader>k <Plug>(Man)
+
