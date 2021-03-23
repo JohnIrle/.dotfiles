@@ -16,10 +16,10 @@ require'compe'.setup {
     path = true,
     buffer = true,
     calc = true,
-    vsnip = true,
+    vsnip = false,
     nvim_lsp = true,
     nvim_lua = true,
-    spell = true,
+    spell = false,
     tags = true,
     snippets_nvim = true,
     treesitter = true

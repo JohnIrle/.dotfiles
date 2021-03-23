@@ -1,5 +1,4 @@
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-set completeopt=menuone,noinsert,noselect
+set completeopt=menuone,noselect
 
 nnoremap <leader>vd :lua vim.lsp.buf.definition()<CR>
 nnoremap <leader>vi :lua vim.lsp.buf.implementation()<CR>
