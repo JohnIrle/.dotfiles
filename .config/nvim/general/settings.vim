@@ -5,6 +5,7 @@ syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
+set cmdheight=2
 set pumheight=10                        " Makes popup menu smaller
 set pumblend=25                         " Transparent popups
 set fileencoding=utf-8                  " The encoding written to file
@@ -24,6 +25,7 @@ set laststatus=0                        " Always display the status line
 set number                              " Line numbers
 set relativenumber
 set numberwidth=1
+set signcolumn=yes
 set nohlsearch                          " Remove highlight when done searching
 set cursorline                          " Enable highlighting of the current line
 set showtabline=2                       " Always show tabs
