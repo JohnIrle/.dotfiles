@@ -1,12 +1,13 @@
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
+inoremap ,shrug  ¯\_(ツ)_/¯
 
-" Use alt + hjkl to resize windows
 nnoremap <Down>    :resize -2<CR>
 nnoremap <Up>    :resize +2<CR>
 nnoremap <Left>    :vertical resize -2<CR>
 nnoremap <Right>    :vertical resize +2<CR>
+
 " Remap escape
 inoremap jj <Esc>
 
