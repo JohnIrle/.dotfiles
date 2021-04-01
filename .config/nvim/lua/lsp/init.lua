@@ -1,4 +1,5 @@
 require('lspkind').init()
+require('lsp.sign-overides')
 
 local function documentHighlight(client, bufnr)
   -- Set autocommands conditional on server_capabilities
