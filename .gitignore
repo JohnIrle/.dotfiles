@@ -12,3 +12,5 @@ node_modules
 .config/mozilla/
 .config/neofetch/
 .config/pomo/
+.config/gh/
+.config/linode-cli
