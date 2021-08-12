@@ -40,6 +40,7 @@ alias ..='cd ..'
 alias cat='bat'
 alias ls='lsd'
 alias k="kubectl"
+alias pysource="source ./venv/bin/activate"
 
 # Tmux
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
@@ -57,9 +58,6 @@ alias branches='git log --graph --oneline --branches'
 # clangd
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
-alias python=/usr/local/bin/python3
-alias pip=/usr/local/Cellar/python@3.9/3.9.2_1/bin/pip3
-
 export PATH=$PATH:~/.local/bin
 
 export PATH="/usr/local/sbin:$PATH"
@@ -74,6 +72,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Swift
 export TOOLCHAINS=swift
+
+# Composer / valet
+export PATH=$PATH:~/.composer/vendor/bin
 
 export PATH="~/Library/Python/3.7/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
@@ -95,3 +96,5 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source /Users/john/.config/broot/launcher/bash/br

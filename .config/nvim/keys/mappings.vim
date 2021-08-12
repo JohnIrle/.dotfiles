@@ -9,7 +9,7 @@ nnoremap <Left>    :vertical resize -2<CR>
 nnoremap <Right>    :vertical resize +2<CR>
 
 " Remap escape
-inoremap jj <Esc>
+" inoremap jj <Esc>
 
 " Easy CAPS
 inoremap <c-u> <ESC>viwUi
@@ -23,12 +23,24 @@ nnoremap <S-TAB> :bprevious<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 
-" <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
+
+" More logical Yank
+nnoremap Y y$
+
+" keep cursor centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" undo break points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
 
 " Better window navigation
 nnoremap <C-h> <C-w>h

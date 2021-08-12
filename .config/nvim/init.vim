@@ -8,13 +8,12 @@ source $HOME/.config/nvim/plug-config/lsp.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/fugitive.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
-source $HOME/.config/nvim/plug-config/pear-tree.vim
 source $HOME/.config/nvim/plug-config/vim-closetag.vim
 source $HOME/.config/nvim/plug-config/neoformat.vim
 
 lua require('plugins')
 lua require('lsp')
-lua require('lsp.pyright-ls')
+lua require('lsp.python-ls')
 lua require('lsp.lua-ls')
 lua require('lsp.docker-ls')
 lua require('lsp.go-ls')

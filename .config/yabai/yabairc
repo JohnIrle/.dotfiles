@@ -28,6 +28,12 @@ yabai -m rule --add app="^OBS$" manage=off
 yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Flux$" manage=off
+yabai -m rule --add app="^MAMP$" manage=off
+yabai -m rule --add app="^Kindle$" manage=off
+yabai -m rule --add app="^Console$" manage=off
+yabai -m rule --add app="^Calendar$" manage=off
+yabai -m rule --add app="^KeyCastr$" manage=off
+yabai -m rule --add app="^Pomatez$" manage=off
 
 # global settings
 yabai -m config mouse_follows_focus off

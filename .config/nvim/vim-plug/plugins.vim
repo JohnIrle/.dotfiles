@@ -13,7 +13,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'peitalin/vim-jsx-typescript'
     " Plug 'fatih/vim-go'
     Plug 'sheerun/vim-polyglot'
-    Plug 'jiangmiao/auto-pairs'
+    " Plug 'jiangmiao/auto-pairs'
+    Plug 'windwp/nvim-autopairs'
     Plug 'morhetz/gruvbox'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -40,7 +41,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ryanoasis/vim-devicons'
 
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'tmsvg/pear-tree'
+    " Plug 'tmsvg/pear-tree'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'tpope/vim-commentary'
