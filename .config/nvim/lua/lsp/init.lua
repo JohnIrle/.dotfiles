@@ -3,7 +3,7 @@ require('lsp.sign-overides')
 
 local function documentHighlight(client, bufnr)
   -- Set autocommands conditional on server_capabilities
-  if client.resolved_capabilities.document_highlight then
+  if client and client.resolved_capabilities.document_highlight then
     vim.api.nvim_exec([[
     hi LspReferenceRead cterm=bold ctermbg=red guibg=#504945
     hi LspReferenceText cterm=bold ctermbg=red guibg=#504945

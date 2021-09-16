@@ -1,11 +1,9 @@
-if (has("termguicolors"))
-  set termguicolors
-endif
+set termguicolors
 
 colorscheme gruvbox
 " set background=dark
 
-hi normal guibg=NONE ctermbg=NONE
+" hi normal guibg=NONE ctermbg=NONE
 hi CursorLineNR guibg=None
 hi LineNr guifg=#83a698
 hi CursorLineNr guifg=#fe8019

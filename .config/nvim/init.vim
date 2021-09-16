@@ -2,7 +2,6 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/themes/colors.vim
-source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/plug-config/lsp.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
@@ -24,3 +23,4 @@ lua require('lsp.rust-ls')
 lua require('lsp.css-ls')
 lua require('lsp.html-ls')
 lua require('lsp.clangd-ls')
+lua require('lsp.vue-ls')

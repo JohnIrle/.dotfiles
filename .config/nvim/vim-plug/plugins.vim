@@ -11,24 +11,35 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'alvan/vim-closetag'
     Plug 'leafgarland/typescript-vim'
     Plug 'peitalin/vim-jsx-typescript'
-    " Plug 'fatih/vim-go'
     Plug 'sheerun/vim-polyglot'
-    " Plug 'jiangmiao/auto-pairs'
     Plug 'windwp/nvim-autopairs'
-    Plug 'morhetz/gruvbox'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     Plug 'mhinz/vim-startify'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'lewis6991/gitsigns.nvim'
+    Plug 'simrat39/rust-tools.nvim'
+
+    " Styles
+    Plug 'morhetz/gruvbox'
+    Plug 'hoob3rt/lualine.nvim'
+    Plug 'akinsho/bufferline.nvim'
+
+    " Icons
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'ryanoasis/vim-devicons'
 
     " Lsp, autocomplete, formatting
     Plug 'neovim/nvim-lspconfig'
     Plug 'onsails/lspkind-nvim'
-    Plug 'hrsh7th/nvim-compe'
-    Plug 'norcalli/snippets.nvim'
     Plug 'sbdchd/neoformat'
     Plug 'kosayoda/nvim-lightbulb'
+
+    " CMP
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-nvim-lua'
+    Plug 'hrsh7th/cmp-vsnip'
+    Plug 'hrsh7th/vim-vsnip'
 
     " Telescope
     Plug 'nvim-lua/popup.nvim'
@@ -36,12 +47,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-    " Icons
-    Plug 'kyazdani42/nvim-web-devicons'
-    Plug 'ryanoasis/vim-devicons'
 
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    " Plug 'tmsvg/pear-tree'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'tpope/vim-commentary'

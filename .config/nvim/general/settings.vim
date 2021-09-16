@@ -42,6 +42,9 @@ set re=0
 let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 let g:netrw_winsize = 20
+" Always show tabs
+set showtabline=2
+set laststatus=2
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 

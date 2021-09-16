@@ -1,7 +1,6 @@
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
-inoremap ,shrug  ¯\_(ツ)_/¯
 
 nnoremap <Down>    :resize -2<CR>
 nnoremap <Up>    :resize +2<CR>
@@ -29,6 +28,8 @@ vnoremap > >gv
 
 " More logical Yank
 nnoremap Y y$
+
+nnoremap y y+
 
 " keep cursor centered
 nnoremap n nzzzv
