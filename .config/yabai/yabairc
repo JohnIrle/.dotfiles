@@ -35,6 +35,8 @@ yabai -m rule --add app="^Calendar$" manage=off
 yabai -m rule --add app="^KeyCastr$" manage=off
 yabai -m rule --add app="^Pomatez$" manage=off
 yabai -m rule --add app="^Anki$" manage=off
+yabai -m rule --add app="^VLC media player$" manage=off
+yabai -m rule --add app="^Reference Systemwide$" manage=off
 
 # global settings
 yabai -m config mouse_follows_focus off
