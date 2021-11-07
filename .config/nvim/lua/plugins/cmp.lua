@@ -38,7 +38,9 @@ cmp.setup {
       with_text = true,
       menu = {buffer = "[buf]", nvim_lsp = "[LSP]", nvim_lua = "[api]", path = "[path]", vsnip = "[snip]", gh_issues = "[issues]"}
     }
-  }
+  },
+
+  experimental = {native_menu = false, ghost_text = true}
 }
 
 cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({map_char = {tex = ''}}))
