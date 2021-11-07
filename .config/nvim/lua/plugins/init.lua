@@ -1,3 +1,4 @@
+-- config
 require("plugins.telescope")
 require("plugins.devicons")
 require("plugins.plug-colorizer")
@@ -8,3 +9,6 @@ require("plugins.nvim-lightbulb")
 require("plugins.lines")
 
 require'nvim-treesitter.configs'.setup {highlight = {enable = true}}
+
+-- cmp plugin
+require("plugins.cmp_gh_source")
