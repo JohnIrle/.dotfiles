@@ -1,14 +1,16 @@
 set completeopt=menuone,noselect
 
-nnoremap <leader>vd :lua vim.lsp.buf.definition()<CR>
-nnoremap <leader>vi :lua vim.lsp.buf.implementation()<CR>
-nnoremap <leader>vsh :lua vim.lsp.buf.signature_help()<CR>
-nnoremap <leader>vrr :lua vim.lsp.buf.references()<CR>
-nnoremap <leader>vrn :lua vim.lsp.buf.rename()<CR>
-nnoremap <leader>vh :lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>gi :lua vim.lsp.buf.implementation()<CR>
+nnoremap <leader>sh :lua vim.lsp.buf.signature_help()<CR>
+nnoremap <leader>rr :lua vim.lsp.buf.references()<CR>
+nnoremap <leader>rn :lua vim.lsp.buf.rename()<CR>
+nnoremap <leader>k :lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>
-nnoremap <leader>hd :lua vim.lsp.diagnostic.show_line_diagnostics();<CR>
-nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <leader>hd :lua vim.diagnostic.open_float();<CR>
+nnoremap <leader>vn :lua vim.diagnostic.goto_next()<CR>
+nnoremap <leader>vp :lua vim.diagnostic.goto_prev()<CR>
+
 
 
 
