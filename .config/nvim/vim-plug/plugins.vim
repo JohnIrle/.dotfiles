@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Styles
     Plug 'morhetz/gruvbox'
+    Plug 'tomasr/molokai'
     Plug 'hoob3rt/lualine.nvim'
     Plug 'akinsho/bufferline.nvim'
 
@@ -38,15 +39,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-nvim-lua'
-    Plug 'hrsh7th/cmp-vsnip'
-    Plug 'hrsh7th/vim-vsnip'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'L3MON4D3/LuaSnip'
+    Plug 'saadparwaiz1/cmp_luasnip'
 
     " Telescope
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
-
+    Plug 'nvim-telescope/telescope-file-browser.nvim'
 
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'tpope/vim-fugitive'
