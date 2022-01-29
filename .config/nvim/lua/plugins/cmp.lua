@@ -7,10 +7,12 @@ local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 cmp.setup {
   snippet = {
     expand = function(args)
-      vim.fn['vsnip#anonymous'](args.body)
+      require('luasnip').lsp_expand(args.body)
     end
   },
-  sources = {{name = "gh_issues"}, {name = "nvim_lua"}, {name = 'nvim_lsp'}, {name = "vsnip"}, {name = 'buffer', keyword_lenth = 5}},
+  sources = {
+    {name = "gh_issues"}, {name = "nvim_lua"}, {name = 'nvim_lsp'}, {name = 'path'}, {name = "luasnip"}, {name = 'buffer', keyword_lenth = 5}
+  },
   mapping = {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -36,7 +38,7 @@ cmp.setup {
   formatting = {
     format = lspkind.cmp_format {
       with_text = true,
-      menu = {buffer = "[buf]", nvim_lsp = "[LSP]", nvim_lua = "[api]", path = "[path]", vsnip = "[snip]", gh_issues = "[issues]"}
+      menu = {buffer = "[buf]", nvim_lsp = "[LSP]", nvim_lua = "[api]", path = "[path]", luasnip = "[snip]", gh_issues = "[issues]"}
     }
   },
 
