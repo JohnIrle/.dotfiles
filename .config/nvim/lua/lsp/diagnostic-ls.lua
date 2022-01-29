@@ -1,5 +1,16 @@
 local filetypes = {javacript = "eslint", javascriptreact = "eslint", typescript = "eslint", typescriptreact = "eslint", lua = "lua", css = "css"}
 
+local formatFiletypes = {
+  css = 'pretier',
+  javascript = 'eslint',
+  javascriptreact = 'eslint',
+  json = 'prettier',
+  scss = 'prettier',
+  typescript = 'eslint',
+  typescriptreact = 'eslint',
+  markdown = 'prettier'
+}
+
 local linters = {
   eslint = {
     sourceName = "eslint",
@@ -13,11 +24,19 @@ local linters = {
       column = "column",
       endLine = "endLine",
       endColumn = "endColumn",
-      message = "${message} [${ruleId}]",
+      message = "[eslint] ${message} [${ruleId}]",
       security = "severity"
     },
     securities = {[2] = "error", [1] = "warning"}
   }
 }
 
-require'lspconfig'.diagnosticls.setup {filetypes = vim.tbl_keys(filetypes), init_options = {filetypes = filetypes, linters = linters}}
+local formatters = {
+  eslint_d = {command = 'eslint_d', args = {'--stdin', '--stdin-filename', '%filename', '--fix-to-stdout'}, rootPatterns = {'.git'}},
+  prettier = {command = 'prettier', args = {'--stdin-filepath', '%filename'}}
+}
+
+require'lspconfig'.diagnosticls.setup {
+  filetypes = vim.tbl_keys(filetypes),
+  init_options = {filetypes = filetypes, formatters = formatters, linters = linters, formatFiletypes = formatFiletypes}
+}
