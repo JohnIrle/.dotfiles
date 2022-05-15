@@ -1,26 +1,24 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/john/.oh-my-zsh
-
-ZSH_THEME="avit"
-plugins=(npm node)
+export RUST_BACKTRACE=1
+ZSH_THEME="powerlevel10k/powerlevel10k"
+plugins=(git npm node zsh-autosuggestions zsh-syntax-highlighting)
 
 export EDITOR=/usr/local/bin/nvim
 export VISUAL=/usr/local/bin/nvim
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # User configuration
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 export PATH=$PATH:~/.local/bin
-
-# Used for status bar versions
-iterm2_print_user_vars() {
-  iterm2_set_user_var pythonVersion $(python3 -V | awk '{ print $2 }')
-  iterm2_set_user_var goVersion $(go version | awk '{print $3}' | cut -b 3-8)
-  iterm2_set_user_var nodeVersion $(node -v | cut -b 2-9)
-  iterm2_set_user_var javaVersion $(jenv global)
-  iterm2_set_user_var rustVersion $(rustc -V | awk '{print $2 }')
-}
 
 # Jenv
 eval "$(jenv init -)" >>/Users/john/.zshrc
@@ -43,6 +41,8 @@ alias cd..='cd ..'
 alias ..='cd ..'
 alias cat='bat'
 alias ls='lsd'
+alias find='fd'
+alias grep='rg'
 alias k="kubectl"
 alias pysource="source ./venv/bin/activate"
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -88,3 +88,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 source /Users/john/.config/broot/launcher/bash/br
 
 eval "$(rbenv init - zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
