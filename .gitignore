@@ -14,3 +14,5 @@ node_modules
 .config/pomo/
 .config/gh/
 .config/linode-cli
+.idea/
+**/.idea
