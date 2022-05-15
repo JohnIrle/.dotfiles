@@ -3,6 +3,8 @@ set termguicolors
  colorscheme gruvbox
 " set background=dark
 
+hi Comment cterm=italic gui=italic
+
 " hi normal guibg=NONE ctermbg=NONE
 hi CursorLineNR guibg=None
 hi LineNr guifg=#83a698

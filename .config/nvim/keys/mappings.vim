@@ -55,4 +55,4 @@ nnoremap <Leader>O O<Esc>^Da
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 map <Leader>k <Plug>(Man)
 
-
+nmap <leader>t <Plug>PlenaryTestFile

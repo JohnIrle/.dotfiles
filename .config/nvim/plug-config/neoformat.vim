@@ -8,7 +8,8 @@ let g:neoformat_lua_luaformat = {
         \ 'args': [
         \  "-i",
         \  "--no-keep-simple-function-one-line",
-        \  "--no-break-after-operator",
+        \  "--no-keep-simple-control-block-one-line",
+        \  "--break-after-operator",
         \  "--break-after-table-lb",
         \  "--column-limit=150",
         \  "--indent-width=2",
