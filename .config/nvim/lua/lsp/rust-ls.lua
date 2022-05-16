@@ -4,7 +4,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require'lspconfig'.rust_analyzer.setup {
   capabilities = capabilities,
   on_attach = require'lsp'.common_on_attach,
-  settings = {["rust-analyzer"] = {cargo = {loadOutDirsFromCheck = true}, procMacro = {enable = true}}}
+  settings = {["rust-analyzer"] = {cargo = {loadOutDirsFromCheck = true}, procMacro = {enable = true}, checkOnSave = {command = "clippy"}}}
 }
 
 require('rust-tools').setup {}
