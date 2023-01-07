@@ -1,3 +1,5 @@
+require('telescope').load_extension('fzy_native')
+
 local actions = require('telescope.actions')
 require('telescope').setup {
   defaults = {
@@ -27,11 +29,8 @@ require('telescope').setup {
   },
   extensions = {fzy_native = {override_generic_sorter = false, override_file_sorter = true}}
 }
-require('telescope').load_extension('fzy_native')
-require('telescope').load_extension('file_browser')
 
-local M = {}
-M.search_dotfiles = function()
+local search_dotfiles = function()
   require("telescope.builtin").find_files({
     prompt_title = "< VimRC >",
     cwd = "$HOME/.config/nvim",
@@ -76,6 +75,19 @@ local function image_selector(prompt, cwd)
   end
 end
 
-M.anime_selector = image_selector("< Background Selector > ", "~/Pictures/gruvbox")
+local anime_selector = image_selector("< Background Selector > ", "~/Pictures/gruvbox")
 
-return M
+local builtin = require('telescope.builtin')
+
+vim.keymap.set('n', '<leader>ps', function()
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end)
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+
+vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<leader>pb', builtin.buffers)
+vim.keymap.set('n', '<leader>ph', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>dl', builtin.diagnostics, {})
+vim.keymap.set('n', '<leader>vrc', search_dotfiles, {})
+vim.keymap.set('n', '<leader>va', anime_selector, {})
