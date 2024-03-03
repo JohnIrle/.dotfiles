@@ -18,7 +18,6 @@ return require('lazy').setup {
   'peitalin/vim-jsx-typescript',
   'sheerun/vim-polyglot',
   'windwp/nvim-autopairs',
-  'mhinz/vim-startify',
   'norcalli/nvim-colorizer.lua',
   'lewis6991/gitsigns.nvim',
   'simrat39/rust-tools.nvim',
@@ -31,8 +30,27 @@ return require('lazy').setup {
   'hoob3rt/lualine.nvim',
   'akinsho/bufferline.nvim',
 
-  -- Icons
-  'kyazdani42/nvim-web-devicons',
+  {
+    'goolord/alpha-nvim',
+    dependencies = {
+      'kyazdani42/nvim-web-devicons',
+    },
+    config = function()
+      local startify = require 'alpha.themes.startify'
+
+      startify.section.header.val = {
+        '     █████████   █████                         █████     ',
+        '    ███░░░░░███ ░░███                         ░░███      ',
+        '   ░███    ░░░  ███████    ██████   ████████  ███████    ',
+        '   ░░█████████ ░░░███░    ░░░░░███ ░░███░░███░░░███░     ',
+        '    ░░░░░░░░███  ░███      ███████  ░███ ░░░   ░███      ',
+        '    ███    ░███  ░███ ███ ███░░███  ░███       ░███ ███  ',
+        '   ░░█████████   ░░█████ ░░████████ █████      ░░█████   ',
+        '   ░░░░░░░░░     ░░░░░   ░░░░░░░░ ░░░░░        ░░░░░     ',
+      }
+      require('alpha').setup(startify.opts)
+    end,
+  },
   'ryanoasis/vim-devicons',
 
   -- Lsp, autocomplete, formatting
@@ -41,6 +59,7 @@ return require('lazy').setup {
   'kosayoda/nvim-lightbulb',
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
+  'WhoIsSethDaniel/mason-tool-installer.nvim',
 
   'VonHeikemen/lsp-zero.nvim',
   'neovim/nvim-lspconfig',
@@ -50,7 +69,6 @@ return require('lazy').setup {
   'saadparwaiz1/cmp_luasnip',
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-nvim-lua', -- Snippets
-  'WhoIsSethDaniel/mason-tool-installer.nvim',
   { -- Autoformat
     'stevearc/conform.nvim',
     opts = {
