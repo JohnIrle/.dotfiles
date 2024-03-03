@@ -18,17 +18,15 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # User configuration
 export PATH="/usr/local/sbin:$PATH"
 
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:$HOME/.local/bin
+
+export LC_ALL=en_US.UTF-8
 
 # Jenv
 eval "$(jenv init -)" >>/Users/john/.zshrc
 export JENV_ROOT=/usr/local/opt/jenv
 
 source $ZSH/oh-my-zsh.sh
-
-function webstorm {
-  open -na "WebStorm.app" --args "$1"
-}
 
 #Homebrew
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
@@ -41,7 +39,8 @@ alias cd..='cd ..'
 alias ..='cd ..'
 alias cat='bat'
 alias ls='lsd'
-alias find='fd'
+alias la='ls -a'
+# alias find='fd' 
 alias grep='rg'
 alias k="kubectl"
 alias pysource="source ./venv/bin/activate"
@@ -74,20 +73,37 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export TOOLCHAINS=swift
 
 # Composer / valet
-export PATH=$PATH:~/.composer/vendor/bin
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+export PATH=$PATH:$HOME/.composer/vendor/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-source /Users/john/.config/broot/launcher/bash/br
-
-eval "$(rbenv init - zsh)"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# opam configuration
+[[ ! -r /Users/john/.opam/opam-init/init.zsh ]] || source /Users/john/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+export PATH="/Users/john/.opam/default/bin:$PATH"
+
+export DOTNET_ROOT=/usr/local/share/dotnet/
+export DOTNET_TOOLS=/Users/john/.dotnet/tools
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_TOOLS
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Sql
+export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@16/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@16/include"
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Asdf
+source /usr/local/opt/asdf/libexec/asdf.sh
+
