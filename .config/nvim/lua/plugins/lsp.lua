@@ -37,22 +37,6 @@ return {
         local client = vim.lsp.get_client_by_id(event.data.client_id)
         print(client)
         if client and client.server_capabilities.documentHighlightProvider then
-          -- local function documentHighlight(client)
-          --   vim.api.nvim_exec(
-          --     [[
-          -- hi LspReferenceRead cterm=bold ctermbg=red guibg=#504945
-          -- hi LspReferenceText cterm=bold ctermbg=red guibg=#504945
-          -- hi LspReferenceWrite cterm=bold ctermbg=red guibg=#504945
-          -- augroup lsp_document_highlight
-          -- autocmd! * <buffer>
-          -- autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-          -- autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-          -- augroup END
-          -- ]],
-          --     false
-          --   )
-          -- end
-          -- documentHighlight(client)
           vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
             buffer = event.buf,
             callback = vim.lsp.buf.document_highlight,
