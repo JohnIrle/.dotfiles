@@ -11,7 +11,11 @@ return {
   'leafgarland/typescript-vim',
   'peitalin/vim-jsx-typescript',
   'sheerun/vim-polyglot',
-  'windwp/nvim-autopairs',
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = true,
+  },
   {
     'norcalli/nvim-colorizer.lua',
     config = function()
