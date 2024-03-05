@@ -115,55 +115,14 @@ return {
       },
     }
 
+    require('lspconfig').lexical.setup {
+      cmd = { vim.fs.normalize '~/Developer/lexical-lsp/lexical/_build/dev/package/lexical/bin/start_lexical.sh' },
+      capabilities = capabilities,
+    }
+
     -- Enable inline dianostic messages
     vim.diagnostic.config {
       virtual_text = true,
     }
   end,
 }
-
--- lsp.on_attach(function(client, bufnr)
--- end)
-
--- require('mason-lspconfig').setup {
---   handlers = {
---     lsp.default_setup,
---     lua_ls = function()
---       local lua_opts = {
---         settings = {
---           Lua = {
---             runtime = {
---               -- Tell the language server which version of Lua you are using. LuaJIT for NVIM
---               version = 'LuaJIT',
---               -- Setup your lua path
---               path = vim.split(package.path, ';'),
---             },
---             diagnostics = {
---               -- Get the language server to recognize the `vim` global
---               globals = { 'vim', 'describe', 'it', 'R', 'P' },
---             },
---             workspace = {
---               -- Make the server aware of Neovim runtime files
---               library = {
---                 [vim.fn.expand '$VIMRUNTIME/lua'] = true,
---                 [vim.fn.expand '$VIMRUNTIME/lua/vim/lsp'] = true,
---               },
---             },
---           },
---         },
---       }
---       require('lspconfig').lua_ls.setup(lua_opts)
---     end,
---   },
---   rust_analyzer = function()
---     require('rust-tools').setup()
---     require('lspconfig').rust_analyzer {
---     }
---   end,
--- }
-
--- lsp.setup()
-
--- end,
--- },
--- }
