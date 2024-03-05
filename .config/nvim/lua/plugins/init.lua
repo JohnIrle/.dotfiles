@@ -29,9 +29,8 @@ return {
   },
   {
     'lewis6991/gitsigns.nvim',
+    opts = {},
   },
-  'simrat39/rust-tools.nvim',
-
   'nanotee/luv-vimdocs',
   'milisims/nvim-luaref',
 
