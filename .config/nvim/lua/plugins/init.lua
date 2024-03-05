@@ -52,9 +52,7 @@ return {
     end,
   },
 
-  'nanotee/luv-vimdocs',
   'milisims/nvim-luaref',
-
   'ryanoasis/vim-devicons',
   {
     'nvim-tree/nvim-web-devicons',
