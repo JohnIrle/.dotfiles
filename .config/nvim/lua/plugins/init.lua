@@ -136,8 +136,8 @@ return {
       vim.keymap.set('n', '<leader>gf', ':diffget //2<CR>')
     end,
   },
+  { 'numToStr/Comment.nvim', opts = {} },
   'tpope/vim-rhubarb',
-  'tpope/vim-commentary',
   'tpope/vim-dispatch',
   'junegunn/gv.vim',
   'vim-utils/vim-man',
