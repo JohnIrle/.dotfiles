@@ -35,7 +35,6 @@ return {
         map(']d', vim.diagnostic.goto_prev, 'Previous Diagnostic')
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)
-        print(client)
         if client and client.server_capabilities.documentHighlightProvider then
           vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
             buffer = event.buf,
