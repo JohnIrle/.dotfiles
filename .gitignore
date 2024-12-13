@@ -12,3 +12,10 @@
 .config/valet/
 .config/yarn/
 .config/zsh/
+.config/broot/
+.config/configstore/
+.config/iterm2/
+.config/pomo/
+.config/springcli/
+
+
