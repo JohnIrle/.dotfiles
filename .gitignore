@@ -1,2 +1,14 @@
 .DS_Store
 */**/.DS_Store
+.config/chessx/
+.config/exercism/
+.config/ghc/
+.config/github-copilot/
+.config/gtk-2.0/
+.config/jgit/
+.config/raycast/
+.config/spring/
+.config/uv/
+.config/valet/
+.config/yarn/
+.config/zsh/
