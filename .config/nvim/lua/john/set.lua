@@ -3,7 +3,7 @@ vim.opt.hidden = true
 vim.opt.wrap = false
 vim.opt.cmdheight = 2
 vim.opt.pumheight = 10
-vim.opt.pumblend = 15
+-- vim.opt.pumblend = 15
 vim.opt.ruler = true
 vim.opt.iskeyword:append '-'
 vim.opt.mouse = 'a'

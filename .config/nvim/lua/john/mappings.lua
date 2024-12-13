@@ -10,6 +10,8 @@ vim.keymap.set('n', '<Right>', '<cmd>:vertical resize +2<cr>')
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 
+vim.keymap.set('i', 'jk', '<ESC>')
+
 -- Easy CAPS
 vim.keymap.set('i', '<c-u>', '<ESC>viwUi')
 vim.keymap.set('n', '<c-u>', 'viwU<ESC>')

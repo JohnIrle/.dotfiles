@@ -6,7 +6,7 @@ return {
     'nvim-lua/popup.nvim',
     {
       'nvim-telescope/telescope-fzy-native.nvim',
-      build = make,
+      build = 'make',
 
       cond = function()
         return vim.fn.executable 'make' == 1
@@ -47,6 +47,9 @@ return {
             ['<C-q>'] = actions.send_to_qflist,
           },
         },
+        path_display = {
+          'filename_first',
+        },
       },
       extensions = { fzy_native = { override_generic_sorter = false, override_file_sorter = true } },
     }
@@ -67,7 +70,7 @@ return {
 
     local function select_background(prompt_bufnr, map)
       local function set_the_background(close)
-        local content = require('telescope.actions.state').get_selected_entry(prompt_bufnr)
+        local content = require('telescope.actions.state').get_selected_entry()
         set_background(content.cwd .. '/' .. content.value)
         if close then
           require('telescope.actions').close(prompt_bufnr)

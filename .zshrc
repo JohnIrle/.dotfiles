@@ -1,24 +1,29 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/john/.oh-my-zsh
 export RUST_BACKTRACE=1
-ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git npm node zsh-autosuggestions zsh-syntax-highlighting)
+ZSH_THEME=""
+plugins=(git npm node kubectl zsh-autosuggestions zsh-syntax-highlighting)
+
+addToPath() {
+  if [[ "$PATH" != *"$1"* ]]; then
+    export PATH=$PATH:$1
+  fi
+}
+
+addToPathFront() {
+  if [[ "$PATH" != *"$1"* ]]; then
+    export PATH=$1:$PATH
+  fi
+}
+
 
 export EDITOR=/usr/local/bin/nvim
 export VISUAL=/usr/local/bin/nvim
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # User configuration
-export PATH="/usr/local/sbin:$PATH"
-
-export PATH=$PATH:$HOME/.local/bin
+addToPathFront /usr/local/sbin
+addToPath $HOME/.local/bin
 
 export LC_ALL=en_US.UTF-8
 
@@ -27,6 +32,7 @@ eval "$(jenv init -)" >>/Users/john/.zshrc
 export JENV_ROOT=/usr/local/opt/jenv
 
 source $ZSH/oh-my-zsh.sh
+
 
 #Homebrew
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
@@ -43,8 +49,8 @@ alias la='ls -a'
 # alias find='fd' 
 alias grep='rg'
 alias k="kubectl"
+alias kns="kubens"
 alias pysource="source ./venv/bin/activate"
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Tmux
 TMUX_CONFIG="~/.config/tmux/.tmux.conf"
@@ -60,45 +66,43 @@ alias glo='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset 
 alias branches='git log --graph --oneline --branches'
 
 # clangd
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+addToPathFront /usr/local/opt/llvm/bin
 
 # Go
 export GOPATH="$HOME/Developer/go"
-export PATH="$PATH:$GOPATH/bin"
+addToPath $GOPATH/bin
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+addToPathFront $HOME/.cargo/bin:$PATH
 
 # Swift
 export TOOLCHAINS=swift
 
 # Composer / valet
-export PATH=$PATH:$HOME/.composer/vendor/bin
+addToPath $HOME/.composer/vendor/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # opam configuration
 [[ ! -r /Users/john/.opam/opam-init/init.zsh ]] || source /Users/john/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-export PATH="/Users/john/.opam/default/bin:$PATH"
+addToPathFront /Users/john/.opam/default/bin
 
 export DOTNET_ROOT=/usr/local/share/dotnet/
 export DOTNET_TOOLS=/Users/john/.dotnet/tools
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_TOOLS
+addToPath $DOTNET_ROOT:$DOTNET_TOOLS
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+addToPath $HOME/.rvm/bin
+
+addToPathFront  ${KREW_ROOT:-$HOME/.krew}/bin
 
 # Sql
-export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
+addToPathFront /usr/local/opt/postgresql@16/bin:$PATH
 export LDFLAGS="-L/opt/homebrew/opt/postgresql@16/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/postgresql@16/include"
-
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -107,3 +111,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # Asdf
 source /usr/local/opt/asdf/libexec/asdf.sh
 
+eval "$(starship init zsh)"
+
+[ -f "/Users/john/.ghcup/env" ] && . "/Users/john/.ghcup/env" # ghcup-env

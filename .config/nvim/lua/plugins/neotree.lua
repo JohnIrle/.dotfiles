@@ -8,7 +8,7 @@ return {
     'nvim-lua/plenary.nvim',
     'MunifTanjim/nui.nvim',
   },
-  config = {
+  opts = {
     filesystem = {
       --   follow_current_file.enabled ,
       follow_current_file = {

@@ -56,7 +56,7 @@ return {
   'ryanoasis/vim-devicons',
   {
     'nvim-tree/nvim-web-devicons',
-    opts = { default = true },
+    enabled = vim.g.have_nerd_font,
   },
   {
     'hrsh7th/nvim-cmp',

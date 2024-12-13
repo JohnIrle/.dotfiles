@@ -60,12 +60,18 @@ return {
           'stable',
           'rust-analyzer',
         },
+        settings = {
+          ['rust-analyzer'] = {
+            check = { command = 'clippy' },
+          },
+        },
       },
       -- Some languages (like typescript) have entire language plugins that can be useful:
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       tsserver = {},
+      clojure_lsp = {},
       lua_ls = {
         settings = {
           Lua = {
@@ -90,6 +96,9 @@ return {
         },
       },
     }
+
+    require('lspconfig').gleam.setup {}
+    require('lspconfig').zls.setup {}
 
     require('mason').setup()
 
