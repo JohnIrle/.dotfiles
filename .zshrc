@@ -39,7 +39,7 @@ alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 alias vim='nvim'
 alias zconfig="nvim ~/.zshrc"
 alias zsource="source ~/.zshrc"
-alias youtube-audio='youtube-dl --ignore-errors --output "%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 0'
+alias youtube-audio='yt-dlp --ignore-errors --output "%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 0'
 alias reset-cam='sudo killall VDCAssistant'
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -77,9 +77,6 @@ addToPathFront $HOME/.cargo/bin:$PATH
 
 # Swift
 export TOOLCHAINS=swift
-
-# Composer / valet
-addToPath $HOME/.composer/vendor/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
