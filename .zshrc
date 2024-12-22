@@ -96,11 +96,6 @@ addToPath $HOME/.rvm/bin
 
 addToPathFront  ${KREW_ROOT:-$HOME/.krew}/bin
 
-# Sql
-addToPathFront /usr/local/opt/postgresql@16/bin:$PATH
-export LDFLAGS="-L/opt/homebrew/opt/postgresql@16/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/postgresql@16/include"
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
