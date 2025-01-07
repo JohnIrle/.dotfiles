@@ -65,6 +65,7 @@ export PATH="$PATH:$GOPATH/bin"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+export CARGO_TARGET_DIR="$HOME/.cargo-target"
 
 # Swift
 export TOOLCHAINS=swift
