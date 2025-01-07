@@ -74,6 +74,7 @@ addToPath $GOPATH/bin
 
 # Rust
 addToPathFront $HOME/.cargo/bin:$PATH
+export CARGO_TARGET_DIR="$HOME/.cargo-target"
 
 # Swift
 export TOOLCHAINS=swift
