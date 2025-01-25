@@ -20,6 +20,7 @@ in
     fzf
     kitty
     brightnessctl
+    obsidian
   ];
 
   programs.git = {
