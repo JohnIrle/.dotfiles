@@ -99,13 +99,15 @@ in
 
   gtk.enable = true;
 
-  gtk.iconTheme.package = pkgs.gruvbox-plus-icons;
-  gtk.iconTheme.name = "Gruvbox-Plus-Dark";
+  # Broken Symlink prevents build
+  # gtk.iconTheme.package = pkgs.gruvbox-plus-icons;
+  # gtk.iconTheme.name = "Gruvbox-Plus-Dark";
 
   qt.enable = true;
 
+  # Conflicts with another definition somewhere
   # platform theme "gtk" or "gnome"
-  qt.platformTheme.name = "gtk";
+  # qt.platformTheme.name = "gtk";
 
   programs.starship = {
     enable = true;
