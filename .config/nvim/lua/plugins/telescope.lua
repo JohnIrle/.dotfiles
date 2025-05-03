@@ -109,15 +109,14 @@ return {
 
     vim.keymap.set('n', '<leader>ps', function()
       builtin.grep_string { search = vim.fn.input 'Grep > ' }
-    end)
-    vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+    end, { desc = 'Telescope: Grep' })
 
-    vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-    vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-    vim.keymap.set('n', '<leader>pb', builtin.buffers)
-    vim.keymap.set('n', '<leader>ph', builtin.help_tags, {})
-    vim.keymap.set('n', '<leader>dl', builtin.diagnostics, {})
-    vim.keymap.set('n', '<leader>vrc', search_dotfiles, {})
-    vim.keymap.set('n', '<leader>va', anime_selector, {})
+    vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Telescope: Files' })
+    vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Telescope: Git Files' })
+    vim.keymap.set('n', '<leader>pb', builtin.buffers, { desc = 'Telescope: Buffers' })
+    vim.keymap.set('n', '<leader>ph', builtin.help_tags, { desc = 'Telescope: Help Tags' })
+    vim.keymap.set('n', '<leader>dl', builtin.diagnostics, { desc = 'Telescope: Diagnostics' })
+    vim.keymap.set('n', '<leader>vrc', search_dotfiles, { desc = 'Telescope: Dotfiles' })
+    vim.keymap.set('n', '<leader>va', anime_selector, { desc = 'Telescope: Backgrounds' })
   end,
 }

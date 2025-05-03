@@ -31,8 +31,12 @@ return {
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
         map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
         map('<leader>vd', vim.diagnostic.open_float, 'Diasnotic Float')
-        map('[d', vim.diagnostic.goto_next, 'Next Diagnostic')
-        map(']d', vim.diagnostic.goto_prev, 'Previous Diagnostic')
+        map('<leader>en', function()
+          vim.diagnostic.jump { count = 1 }
+        end, 'Error Next')
+        map('<leader>ep', function()
+          vim.diagnostic.jump { count = -1 }
+        end, 'Error Previous')
 
         local client = vim.lsp.get_client_by_id(event.data.client_id)
         if client and client.server_capabilities.documentHighlightProvider then
@@ -70,7 +74,7 @@ return {
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      tsserver = {},
+      ts_ls = {},
       clojure_lsp = {},
       lua_ls = {
         settings = {
@@ -97,6 +101,7 @@ return {
       },
     }
 
+    require('lspconfig').ocamllsp.setup {}
     require('lspconfig').gleam.setup {}
     require('lspconfig').zls.setup {}
 
@@ -105,12 +110,12 @@ return {
     -- You can add other tools here that you want Mason to install
     -- for you, so that they are available from within Neovim.
     local ensure_installed = vim.tbl_keys(servers or {})
-    vim.list_extend(ensure_installed, {
-      'stylua', -- Used to format lua code
-    })
-    require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+
+    require('mason-tool-installer').setup { ensure_installed = { 'stylua' } }
 
     require('mason-lspconfig').setup {
+      ensure_installed = ensure_installed,
+      automatic_installation = false,
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
