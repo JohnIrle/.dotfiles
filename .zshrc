@@ -46,7 +46,7 @@ alias ..='cd ..'
 alias cat='bat'
 alias ls='lsd'
 alias la='ls -a'
-# alias find='fd' 
+# alias find='fd'
 alias grep='rg'
 alias k="kubectl"
 alias kns="kubens"
@@ -97,12 +97,17 @@ addToPath $HOME/.rvm/bin
 
 addToPathFront  ${KREW_ROOT:-$HOME/.krew}/bin
 
+source <(fzf --zsh)
+export FZF_DEFAULT_OPTS="--style minimal --color 16 --layout=reverse --height 30% --preview='batcat -p --color=always {}'"
+export FZF_CTRL_R_OPTS="--style minimal --color 16 --info inline --no-sort --no-preview"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Asdf
-source /usr/local/opt/asdf/libexec/asdf.sh
+export ASDF_DATA_DIR=/Users/john/.asdf
+addToPathFront "$ASDF_DATA_DIR/shims"
 
 eval "$(starship init zsh)"
 
