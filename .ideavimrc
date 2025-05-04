@@ -147,7 +147,8 @@ map <leader>fr <Action>(RecentFiles)
 map <leader><leader> <Action>(RecentFiles)
 map <leader>fc <Action>(FindInPath)
 map <leader>fl <Action>(RecentLocations)
-map <leader>fs <Action>(NewScratchFile)
+map <leader>fs <Action>(FileStructurePopup)
+map <leader>sf <Action>(NewScratchFile)
 
 " Refactoring
 map <leader>rn <Action>(RenameElement)
