@@ -136,6 +136,9 @@ return {
     -- Enable inline dianostic messages
     vim.diagnostic.config {
       virtual_text = true,
+      float = {
+        border = 'solid',
+      },
     }
   end,
 }
